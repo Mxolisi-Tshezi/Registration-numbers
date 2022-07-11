@@ -23,13 +23,13 @@ var posMessage = document.querySelector('.positiveMsg')
 function clearError() {
     setTimeout(function () {
         errMessage.innerHTML = "";
-    }, 2000);
+    }, 5000);
 }
 
 function clearMsg() {
     setTimeout(function () {
         posMessage.innerHTML = "";
-    }, 2000);
+    }, 5000);
 }
 
 function regDisplayBtn() {
@@ -40,7 +40,7 @@ function regDisplayBtn() {
     if (result !== true) {
         posMessage.innerHTML = ""
         clearError()
-        errMessage.innerHTML = "INVALID:No town has this registration number in the list Invalid"
+        errMessage.innerHTML = "INVALID:Please Enter a Valid registration Number"
     }
     else if (instance.addReg(plate.toUpperCase())) {
         displayReg(instance.getRegNumbers());
