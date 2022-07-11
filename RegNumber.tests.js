@@ -1,13 +1,13 @@
 describe('in registrationNumFunc', function () {
 
-    it('Must be able to set registration number to CA for cape town ', function () {
+    it('Must be able to Show registration number to CA for cape town ', function () {
         let input = registrationNumFunc();
         input.addReg("CA 458762")
         input.addReg("CA 347 565")
         assert.deepEqual(input.getRegNumbers(), ["CA 458762","CA 347 565"])
     })
 
-    it('Must be able to set registration number to CY for Bellvile ', function () {
+    it('Must be able to Show registration number to CY for Bellvile ', function () {
         let input = registrationNumFunc();
         input.addReg("CY 458")
         input.addReg("CY 876456")
@@ -15,14 +15,14 @@ describe('in registrationNumFunc', function () {
         assert.deepEqual(input.getRegNumbers(), ["CY 458", "CY 876456", "CY 459 008"])
     })
 
-    it('Must be able to set registration number to CJ for Paarl ', function () {
+    it('Must be able to Show registration number to CJ for Paarl ', function () {
         let input = registrationNumFunc();
         input.addReg("CJ 585 458")
         input.addReg("CJ 786 678")
         assert.deepEqual(input.getRegNumbers(), ["CJ 585 458", "CJ 786 678"])
     })
 
-    it('Must be able to set registration number to CL for stellenbosch ', function () {
+    it('Must be able to Show registration number to CL for stellenbosch ', function () {
         let input = registrationNumFunc();
         input.addReg("CL 585 458")
         input.addReg("CL 786 678")
