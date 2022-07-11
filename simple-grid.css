@@ -17,7 +17,7 @@ body {
   top: 0;
   right: 10em;
   font-size: 100%;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   background-color: grey;
   width: 100%;
   justify-content: center;
@@ -94,8 +94,6 @@ p {
 .justify {
   text-align: justify;
 }
-
-/* ==== GRID SYSTEM ==== */
 
 .container {
   width: 90%;
@@ -216,7 +214,9 @@ p {
 
   .col-6 {
     width: 46%;
-    float: left;
+    /* float: left; */
+    justify-content: center;
+    
   }
 
   .col-7 {
@@ -254,9 +254,6 @@ p {
     max-width: 60rem;
   }
 }
-
-
-/* My styling */
 .dispalyPlate {
     position: relative;
     box-sizing: border-box;
@@ -332,6 +329,7 @@ p {
         
 display: flex;
 justify-content: center;
+
     }
     .dispalyPlate{
         display: flex;
