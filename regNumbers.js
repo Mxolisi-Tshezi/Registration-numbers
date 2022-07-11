@@ -1,9 +1,9 @@
-function RegistrationOpp(regPlate) {
+function registrationNumFunc(regPlate) {
     let message = ""
     let storedReg = regPlate || {};
 
     function isValidTown(regNumber) {
-        let regCode = ["CA", "CY", "CJ" ,"CL",];
+        let regCode = ["CA","CY","CJ","CL",];
 
         for (let index = 0; index < regCode.length; index++) {
             const plateCode = regCode[index];
@@ -20,12 +20,12 @@ function RegistrationOpp(regPlate) {
 
         if (storedReg[regNumber] === undefined) {
             if (!isValidTown(regNumber)) {
-                message = " INVALID:No town has this registration number in the list Invalid"
+                message = "INVALID:No town has this registration number in the list Invalid"
                 return false;
             }
             storedReg[regNumber] = 0;
 
-            message = "Registration number added successfully!"
+            message = "VALID:Successfully Added!"
             return true;
 
         } else {
