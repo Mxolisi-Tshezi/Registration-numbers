@@ -1,9 +1,9 @@
-function regisNumberfunc(regPlate) {
+function RegistrationOpp(regPlate) {
     let message = ""
     let storedReg = regPlate || {};
 
     function isValidTown(regNumber) {
-        let regCode = ["CA", "CY", "CJ"];
+        let regCode = ["CA", "CY", "CJ" ,"CL",];
 
         for (let index = 0; index < regCode.length; index++) {
             const plateCode = regCode[index];

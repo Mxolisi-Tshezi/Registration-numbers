@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <b><ruby>
-            <title>Reg Numbers</title>
+            <title>Registration Numbers</title>
         </ruby></b>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
@@ -14,61 +14,67 @@
         <script type="text/x-template" class="regTemplate">
             {{#each plates}}
               <li>{{this}}</li>
-            {{/each}}
+            {{/each}} 
         </script>
 
     <link rel="stylesheet" href="simple-grid.css">
     <link rel="stylesheet" href="regNumbers.css">
-
 </head>
+
 <body>
-    <div class="col-6">
-        <div class="heading col-12">
-            <h1>REGISTRATION NUMBERS LIST</h1>
-        </div>
-
-        <div id="box" class="col-12">
-            <div class="col-12 center">
-                <input type="text" class="enteredRegNum" placeholder="Enter Valid Reg Number">
+    <div class="content">
+        <div class="col-6">
+            <div class="heading col-12">
+                <h1>REGISTRATION NUMBERS WEBPAGE</h1>
             </div>
-        </div>
-
-        <br>
-
-        <div class="regAddBtn col-12 center" name="regAddBtn">
-            <button class="addReg">Add</button><button class="clearReg">Remove</button>
+    
+            <div id="box" class="col-12">
+                <div class="col-12 center">
+                    <input type="text" class="enteredRegNum" placeholder="Enter Valid Reg Number">
+                </div>
+            </div>
+    
+            <br>
+    
+            <div class="regAddBtn col-12 center" name="regAddBtn">
+                <button class="addReg">Add</button><button class="clearReg">Reset</button>
+                <br><br>
+                <div class='row1'>
+                    <select class="towns center" names="towns">
+                        <option value="">Select City/Town</option>
+                        <option value="CY">Bellville</option>
+                        <option value="CA">Cape Town</option>
+                        <option value="CJ">Paarl</option>
+                        <option value="CL">Stellenbosch</option>
+                    </select>
+                </div>
+    
             <br><br>
-            <div class='row1'>
-                <select class="towns center" names="towns">
-                    <option value="">Select Town</option>
-                    <option value="CA">Cape Town</option>
-                    <option value="CJ">Paarl</option>
-                    <option value="CY">Bellville</option>
-                </select>
+    
+            <div class='col-12 center'>
+                <p class='errorMsg'></p>
             </div>
-
-        <br><br>
-
-        <div class='col-12 center'>
-            <p class='errorMsg'></p>
-        </div>
-
-        <div class='col-12 center'>
-            <p class='positiveMsg'></p>
-        </div>
-
-        <div class="row2">
-        </div>
-          
-            <ul class="dispalyPlate">
+    
+            <div class='col-12 center'>
+                <p class='positiveMsg'></p>
+            </div>
+    
+            <div class="row2">
+            </div>
               
-    </ul>
+                <ul class="dispalyPlate">
+                  
+        </ul>
+            </div>
+            
         </div>
-        
+    
     </div>
+    
 
     <script src="regNumbers.js"> charset = "utf-8"</script>
     <script src="regNumbers-DOM.js" charset="utf-8"></script>
+
 
 </body>
 

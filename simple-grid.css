@@ -1,4 +1,4 @@
-  /**
+ /**
 *** SIMPLE GRID
 *** (C) ZACH COLE 2016
 **/
@@ -15,10 +15,12 @@ body {
   padding: 0;
   left: 0;
   top: 0;
+  right: 10em;
   font-size: 100%;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  background-color: lightblue;
+  background-color: grey;
   width: 100%;
+  justify-content: center;
 }
 
 /* ROOT FONT STYLES */
