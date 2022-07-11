@@ -8,14 +8,11 @@ var dropdownElem = document.querySelector(".dropdown")
 var townsElem = document.querySelector(".towns") //CA
 var clearBtn = document.querySelector(".clearReg")
 
-//getting local storage
 
 var registration = JSON.parse(localStorage.getItem('plates'));
 
-//calling on factory function as instance
 var instance = RegistrationOpp(registration);
 
-//calling on function to get reg numbers to display
 displayReg(instance.getRegNumbers());
 
 
@@ -43,13 +40,12 @@ function regDisplayBtn() {
     if (result !== true) {
         posMessage.innerHTML = ""
         clearError()
-        errMessage.innerHTML = "Invalid registration number - town not supported."
+        errMessage.innerHTML = "INVALID:No town has this registration number in the list Invalid"
     }
     else if (instance.addReg(plate.toUpperCase())) {
         displayReg(instance.getRegNumbers());
         posMessage.innerHTML = instance.regMsg();
         clearMsg();
-        // setting local storage
         localStorage.setItem("plates", JSON.stringify(instance.storedReg));
     } else {
         errMessage.innerHTML = instance.regMsg();

@@ -8,7 +8,6 @@ function RegistrationOpp(regPlate) {
         for (let index = 0; index < regCode.length; index++) {
             const plateCode = regCode[index];
             if (regNumber.startsWith(plateCode)) {
-                // this is a valid town so I can add the reg number...
                 return true;
             }
         }
@@ -19,21 +18,18 @@ function RegistrationOpp(regPlate) {
     function addReg(regNumber) {
         message = "";
 
-        // check if this reg number already exists    
         if (storedReg[regNumber] === undefined) {
             if (!isValidTown(regNumber)) {
-                message = "Invalid registration number - town not supported."
+                message = " INVALID:No town has this registration number in the list Invalid"
                 return false;
             }
-            // adding valid reg
             storedReg[regNumber] = 0;
 
             message = "Registration number added successfully!"
             return true;
 
         } else {
-            // this is a duplicate
-            message = "This registration number already exists!";
+            message = "Already exists!";
             return false;
         }
 
