@@ -11,7 +11,7 @@ var clearBtn = document.querySelector(".clearReg")
 
 var registration = JSON.parse(localStorage.getItem('plates'));
 
-var instance = RegistrationOpp(registration);
+var instance = registrationNumFunc(registration);
 
 displayReg(instance.getRegNumbers());
 
